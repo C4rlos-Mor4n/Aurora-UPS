@@ -3,7 +3,7 @@ import config from "../../config";
 
 const mongoURI = config.MONGO_URI;
 
-mongoose.connect(mongoURI);
+mongoose.connect(mongoURI, { dbName: "AuroraUps" });
 
 const userSchema = new mongoose.Schema({
   number: String,

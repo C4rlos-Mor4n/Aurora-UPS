@@ -28,7 +28,7 @@ async function sendFormattedEmail(data: {
     htmlContent = `
       <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #333;">
         <div style="text-align: center;">
-        <img src="https://i.imgur.com/6MyaSml.png" alt="Logo" style="max-width: 150px; width: 100%; height: auto; margin-bottom: 20px;"
+        <img src="https://i.imgur.com/EtoVk3L.png" alt="Logo" style="max-width: 150px; width: 100%; height: auto; margin-bottom: 20px;"
         media="screen and (max-width: 600px)" style="max-width: 100px;"/>
         </div>
         <h1 style="color: #FF4500; text-align: center;">⚡ACCIÓN REQUERIDA⚡</h1>
@@ -54,7 +54,7 @@ async function sendFormattedEmail(data: {
     htmlContent = `
       <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #333;">
         <div style="text-align: center;">
-              <img src="https://i.imgur.com/6MyaSml.png" alt="Logo" style="max-width: 150px; width: 100%; height: auto; margin-bottom: 20px;"
+              <img src="https://i.imgur.com/EtoVk3L.png" alt="Logo" style="max-width: 150px; width: 100%; height: auto; margin-bottom: 20px;"
               media="screen and (max-width: 600px)" style="max-width: 100px;"/>
               </div>
         <h1 style="color: #28a745; text-align: center;">✅ BOT CONECTADO</h1>
