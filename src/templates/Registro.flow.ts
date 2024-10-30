@@ -45,7 +45,7 @@ export const Registroflow = addKeyword<Provider>(EVENTS.ACTION)
     {
       capture: true,
     },
-    async (ctx, { fallBack, state, flowDynamic }) => {
+    async (ctx, { fallBack, state, flowDynamic, gotoFlow }) => {
       try {
         if (ctx.body.includes("_event_")) {
           return fallBack(
@@ -70,9 +70,10 @@ export const Registroflow = addKeyword<Provider>(EVENTS.ACTION)
         );
 
         if (!login) {
-          return fallBack(
+          await flowDynamic(
             "🚫 *Error de autenticación*\n\nLa contraseña ingresada no es correcta.\n\nPor favor, verifica e intenta nuevamente."
           );
+          return gotoFlow(Registroflow);
         }
 
         await flowDynamic(
@@ -89,8 +90,8 @@ export const Registroflow = addKeyword<Provider>(EVENTS.ACTION)
         await verificarTareasPendientesYNotificar(phone);
       } catch (error) {
         console.log("[RegistroFlow] Error al iniciar sesión:", error);
-        return fallBack(
-          "⚠️ *Ocurrió un error*\n\nNo pudimos completar el registro. Por favor, intenta nuevamente más tarde.\n\n Por favor, vuelve a ingresar la contraseña."
+        return await flowDynamic(
+          "⚠️ *Ocurrió un error*\n\nNo pudimos completar el registro. Por favor, intenta nuevamente más tarde."
         );
       }
     }
