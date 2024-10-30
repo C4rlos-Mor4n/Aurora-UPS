@@ -1,0 +1,41 @@
+{
+  "name": "aurora-ups",
+  "version": "1.0.0",
+  "description": "notificador de tareas para el sistema de avac de ups",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./dist/app.js",
+    "lint": "eslint . --no-ignore",
+    "dev": "npm run lint && nodemon ./src/app.ts",
+    "build": "npx rollup -c"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@builderbot/provider-baileys": "1.2.2",
+    "@builderbot/bot": "1.2.2",
+    "nodemailer": "^6.9.16",
+    "puppeteer": "^23.6.0",
+    "node-cron": "^3.0.3",
+    "form-data": "^4.0.1",
+    "mongoose": "^8.7.3",
+    "dotenv": "^16.4.5",
+    "cheerio": "^1.0.0",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "eslint-plugin-builderbot": "latest",
+    "@types/puppeteer": "^7.0.4",
+    "@types/node": "^20.17.1",
+    "typescript": "^5.4.3",
+    "eslint": "^8.52.0",
+    "nodemon": "^3.1.0",
+    "rollup": "^4.10.0",
+    "tsx": "^4.7.1"
+  },
+  "author": "Carlos Morán <cmoranv1@est.ups.edu.ec> (https://linkedin.com/in/carlos-morán-vásquez-834974300)",
+  "license": "ISC"
+}
